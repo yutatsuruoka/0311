@@ -273,6 +273,21 @@ header
 ----------------------------------------------------------------------------*/
 .headerContainer {
   margin: 50px auto;
+  position: relative;
+}
+.headerContainer .snsContainer {
+  position: absolute;
+  top: 35px;
+  right: 0;
+}
+.headerContainer .snsContainer li {
+  float: left;
+}
+.headerContainer .snsContainer li.hatena {
+  width: 60px;
+}
+.headerContainer .snsContainer li.tw {
+  width: 85px;
 }
 /*----------------------------------------------------------------------------
 keyVisualContainer
