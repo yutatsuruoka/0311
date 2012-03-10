@@ -1,0 +1,148 @@
+@import "reset.less";
+body {
+    font-family:"小塚ゴシック Pr6N",Helvetica, Arial, sans-serif;
+    color: #666;
+    background:#000;
+    font-size:12px;
+    line-height:2.2em;
+}
+
+a {
+    color: #fbae5b;
+    text-decoration: none;
+    &:hover{color:#d6862f;}
+}
+
+
+.wrapper{
+    width:1240px;
+    margin:0 auto;
+}
+
+.left{float:left;}
+.right{float:right;}
+
+/*----------------------------------------------------------------------------
+header
+----------------------------------------------------------------------------*/
+.headerContainer{
+    margin:50px auto;
+}
+
+/*----------------------------------------------------------------------------
+keyVisualContainer
+----------------------------------------------------------------------------*/
+.keyVisualContainer{
+    margin:0 auto 100px;
+}
+
+
+/*----------------------------------------------------------------------------
+.contentsContainer  share style
+----------------------------------------------------------------------------*/
+.contentsContainer section{margin:0 0 100px;}
+.contentsContainer section h1{height:47px; margin:0 0 50px;}
+
+
+/*----------------------------------------------------------------------------
+leftContainer
+----------------------------------------------------------------------------*/
+.leftContainer{
+    h1{
+        height:47px;
+    }
+    width:600px;
+    .photoContainer{
+        li{
+            width:600px;
+            height:400px;
+            margin:0 0 50px;
+        }
+    }
+}
+
+/*----------------------------------------------------------------------------
+rightContainer
+----------------------------------------------------------------------------*/
+.rightContainer{
+    width:590px;
+}
+
+/*----------------------------------------------------------------------------
+rightContainer #sec02
+----------------------------------------------------------------------------*/
+#sec02{
+    .formText{
+        width:590px;
+        height:200px;
+        margin:0 0 20px;
+    }
+    .formBtn{
+        border:none;
+        width:590px;
+        height:80px;
+        background:url(../i/sendbtn01.png) no-repeat left top;
+        cursor:pointer;
+    }
+}
+
+/*----------------------------------------------------------------------------
+rightContainer #sec03
+----------------------------------------------------------------------------*/
+#sec03{
+    .message{
+        color:#fff;
+        line-height:1.8em;
+        font-size:24px;
+    }
+}
+
+
+/*----------------------------------------------------------------------------
+rightContainer #sec06
+----------------------------------------------------------------------------*/
+#sec06{
+    .instaPhoto{
+        li{
+            float:left;
+            width:180px;
+            height:180px;
+            margin:0 25px 25px 0;
+            &.last{margin:0;}
+        }
+    }
+}
+
+/*----------------------------------------------------------------------------
+footerContainer
+----------------------------------------------------------------------------*/
+.footerContainer{
+    overflow:hidden;
+    border-top:1px solid #fff;
+    padding:25px 0 40px;
+    h1{
+        margin:0 25px 0 0;
+        color:#fff;
+        float:left;
+        }
+    .member{
+        float:left;
+        li{
+        float:left;
+        span{padding:0 1em;}
+        }
+    }
+        .copyRight{float:right;}
+}
+/*----------------------------------------------------------------------------
+clearfix
+----------------------------------------------------------------------------*/
+.clearfix:after {
+  height: 0;
+  visibility: hidden;
+  content: ".";
+  display: block;
+  clear: both; }
+
+.clearfix {
+  zoom: 1; }
