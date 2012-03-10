@@ -279,7 +279,7 @@ keyVisualContainer
 ----------------------------------------------------------------------------*/
 .keyVisualContainer {
   position: relative;
-  height: 1240px;
+  height: 500px;
   margin: 0 auto 100px;
 }
 .keyVisualContainer img {
@@ -352,9 +352,11 @@ rightContainer #sec03
 rightContainer #sec04
 ----------------------------------------------------------------------------*/
 #sec04 .twContainerFeed {
+  height: 215px;
   color: #fff;
   line-height: 1.6em;
   font-size: 20px;
+  overflow: hidden;
 }
 /*----------------------------------------------------------------------------
 rightContainer #sec06
