@@ -1,0 +1,429 @@
+html {
+  color: #000;
+  background: #FFF;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+fieldset, img {
+  border: 0;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+li {
+  list-style: none;
+}
+caption, th {
+  text-align: left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+q:before, q:after {
+  content: '';
+}
+abbr, acronym {
+  border: 0;
+  font-variant: normal;
+}
+sup {
+  vertical-align: text-top;
+}
+sub {
+  vertical-align: text-bottom;
+}
+input, textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+input, textarea, select {
+  *font-size: 100%;
+}
+legend {
+  color: #000;
+}
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+body {
+  line-height: 1;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+nav ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+del {
+  text-decoration: line-through;
+}
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+input, select {
+  vertical-align: middle;
+}
+body {
+  font-family: "小塚ゴシック Pr6N", Helvetica, Arial, sans-serif;
+  color: #666;
+  background: #000;
+  min-width: 1240px;
+  font-size: 12px;
+  line-height: 2.2em;
+  padding: 20px;
+  -webkit-text-size-adjust: none;
+}
+a {
+  color: #fbae5b;
+  text-decoration: none;
+}
+a:hover {
+  color: #d6862f;
+}
+.wrapper {
+  width: 1240px;
+  margin: 0 auto;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+/*----------------------------------------------------------------------------
+header
+----------------------------------------------------------------------------*/
+.headerContainer {
+  margin: 50px auto;
+  position: relative;
+}
+.headerContainer .snsContainer {
+  position: absolute;
+  top: 35px;
+  right: 0;
+}
+.headerContainer .snsContainer li {
+  float: left;
+}
+.headerContainer .snsContainer li.hatena {
+  width: 60px;
+}
+.headerContainer .snsContainer li.tw {
+  width: 85px;
+}
+/*----------------------------------------------------------------------------
+keyVisualContainer
+----------------------------------------------------------------------------*/
+.keyVisualContainer {
+  position: relative;
+  height: 500px;
+  margin: 0 auto 100px;
+}
+.keyVisualContainer img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 8;
+}
+.keyVisualContainer img.active {
+  z-index: 10;
+}
+.keyVisualContainer img.last-active {
+  z-index: 9;
+}
+/*----------------------------------------------------------------------------
+.contentsContainer  share style
+----------------------------------------------------------------------------*/
+.contentsContainer section {
+  margin: 0 0 100px;
+}
+.contentsContainer section h1 {
+  height: 47px;
+  margin: 0 0 50px;
+}
+/*----------------------------------------------------------------------------
+leftContainer
+----------------------------------------------------------------------------*/
+.leftContainer {
+  width: 600px;
+}
+.leftContainer h1 {
+  height: 47px;
+}
+.leftContainer .photoContainer li {
+  width: 600px;
+  height: 400px;
+  margin: 0 0 50px;
+}
+/*----------------------------------------------------------------------------
+rightContainer
+----------------------------------------------------------------------------*/
+.rightContainer {
+  width: 590px;
+}
+/*----------------------------------------------------------------------------
+rightContainer #sec02
+----------------------------------------------------------------------------*/
+#sec02 .formText, #sec02-2 .formText {
+  width: 550px;
+  height: 160px;
+  margin: 0 0 20px;
+  padding: 20px;
+  font-size: 20px;
+}
+#sec02 .formBtn, #sec02-2 .formBtn {
+  border: none;
+  width: 590px;
+  height: 80px;
+  background: url(../i/sendbtn01.png) no-repeat left top;
+  cursor: pointer;
+}
+/*----------------------------------------------------------------------------
+rightContainer #sec03
+----------------------------------------------------------------------------*/
+#sec03 .message {
+  color: #fff;
+  line-height: 1.8em;
+  font-size: 24px;
+}
+/*----------------------------------------------------------------------------
+rightContainer #sec04
+----------------------------------------------------------------------------*/
+#sec04 .twContainerFeed {
+  height: 215px;
+  color: #fff;
+  line-height: 1.6em;
+  font-size: 20px;
+  overflow: hidden;
+}
+/*----------------------------------------------------------------------------
+rightContainer #sec06
+----------------------------------------------------------------------------*/
+#sec06 .instaPhoto li {
+  float: left;
+  width: 180px;
+  height: 180px;
+  margin: 0 25px 25px 0;
+}
+#sec06 .instaPhoto li.last {
+  margin: 0;
+}
+/*----------------------------------------------------------------------------
+footerContainer
+----------------------------------------------------------------------------*/
+.footerContainer {
+  overflow: hidden;
+  border-top: 1px solid #fff;
+  padding: 25px 0 40px;
+}
+.footerContainer h1 {
+  margin: 0 25px 0 0;
+  color: #fff;
+  float: left;
+}
+.footerContainer .member {
+  float: left;
+}
+.footerContainer .member li {
+  float: left;
+}
+.footerContainer .member li span {
+  padding: 0 1em;
+}
+.footerContainer .copyRight {
+  float: right;
+}
+/*----------------------------------------------------------------------------
+clearfix
+----------------------------------------------------------------------------*/
+.clearfix:after {
+  height: 0;
+  visibility: hidden;
+  content: ".";
+  display: block;
+  clear: both;
+}
+.clearfix {
+  zoom: 1;
+}

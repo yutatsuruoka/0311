@@ -3,8 +3,11 @@ body {
     font-family:"小塚ゴシック Pr6N",Helvetica, Arial, sans-serif;
     color: #666;
     background:#000;
+    min-width:1240px;
     font-size:12px;
     line-height:2.2em;
+    padding:20px;
+    -webkit-text-size-adjust: none; 
 }
 
 a {
@@ -27,13 +30,39 @@ header
 ----------------------------------------------------------------------------*/
 .headerContainer{
     margin:50px auto;
+    position:relative;
+    .snsContainer{
+        position:absolute;
+        top:35px;
+        right:0;
+        li{
+            float:left;
+        }
+        li.hatena{width:60px;}
+        li.tw{width:85px;}
+    }
 }
 
 /*----------------------------------------------------------------------------
 keyVisualContainer
 ----------------------------------------------------------------------------*/
 .keyVisualContainer{
+    position:relative;
+    height:500px;
     margin:0 auto 100px;
+
+    img {
+        position:absolute;
+        top:0;
+        left:0;
+        z-index:8;
+        &.active{
+            z-index:10;
+        }
+        &.last-active {
+            z-index:9;
+        }
+    }
 }
 
 
@@ -71,11 +100,13 @@ rightContainer
 /*----------------------------------------------------------------------------
 rightContainer #sec02
 ----------------------------------------------------------------------------*/
-#sec02{
+#sec02,#sec02-2{
     .formText{
-        width:590px;
-        height:200px;
+        width:550px;
+        height:160px;
         margin:0 0 20px;
+        padding:20px;
+        font-size:20px;
     }
     .formBtn{
         border:none;
@@ -96,6 +127,20 @@ rightContainer #sec03
         font-size:24px;
     }
 }
+
+/*----------------------------------------------------------------------------
+rightContainer #sec04
+----------------------------------------------------------------------------*/
+#sec04{
+    .twContainerFeed{
+        height:215px;
+        color:#fff;
+        line-height:1.6em;
+        font-size:20px;
+        overflow:hidden;
+    }
+}
+
 
 
 /*----------------------------------------------------------------------------

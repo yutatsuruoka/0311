@@ -1,19 +1,46 @@
 <!DOCTYPE HTML>
 <html lang="jp">
 <head>
-	<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <title>3.11REBORN... あれから１年。今だから言える、心のメッセージ。</title>
-    <link rel="stylesheet" type="text/less" href="less/style.less">
-    <script type="text/javascript" src="j/less.js"></script>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js"></script>
+    <meta name="description" content="3.11REBORNは、日本中を悲しみに包んだ東日本大震災から１年の時を刻み、今だから言えるメッセージ、そして１年前の自分が何を考え何をしていたのかを振り返るサイトです。">
+    <meta name="keywords" content="3.11REBORN 東日本大震災, ３月１１日, 太平洋沖地震, メッセージ, 仙台, 被災地">
+    <meta name="author" content="YUTA TSURUOKA SATORU ITABASHI MINORI KIKUGAWA SATOSHI MOGI MONOspace">
+    <meta property="og:title" content="3.11REBORN...">
+    <meta property="og:description" content="あれから１年。今だから言える、心のメッセージ。">
+    <meta property="og:url" content="http://0311.jp/">
+    <meta property="og:image" content="i/like_link.png">
+    <meta property="og:type" content="website" />
+    <link rel="shortcut icon" href="i/favicon.ico">
+    <link rel="apple-touch-icon" href="i/apple-touch-icon.png">
+
+    <script type="text/javascript" src="j/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="j/contents.js"></script>
+    
+    <link rel="stylesheet" href="c/style.css" />
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
 </head>
 <body>
     <header class="headerContainer wrapper">
     <img src="i/logo.png" alt="3.11REBORN... あれから１年。今だから言える、心のメッセージ。">
+    <ul class="snsContainer clearfix">
+        <li class="hatena"><a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard" title="3.11REBORN... あれから１年。今だから言える、心のメッセージ。"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script></li>
+        <li class="tw"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://0311.jp/" data-text="3.11REBORN... あれから１年。今だから言える、心のメッセージ。" data-hashtags="0311jp">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></li>
+        <li class="fb"><iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2F0311.jp%2F&amp;send=false&amp;layout=button_count&amp;width=110&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;appId=159580674161853" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:110px; height:21px;" allowTransparency="true"></iframe></li>
+    </ul>
     </header>
 
     <div class="keyVisualContainer wrapper">
-        <img src="i/keyvisual01.jpg">
+        <img src="i/keyvisual01.jpg" class="active"> 
+        <img src="i/keyvisual02.jpg">
+        <img src="i/keyvisual03.jpg">
+        <img src="i/keyvisual04.jpg">
+        <img src="i/keyvisual05.jpg">
     </div>
 
     <div class="contentsContainer clearfix wrapper">
@@ -39,8 +66,12 @@
             <form>
                 <section id="sec02">
                 <h1><img src="i/ttl02.png" alt="OF THE TRUTH MESSAGE 今だから言える、心のメッセージ。"></h1>
-                <form method="post" action="">
-                <input type="text" class="formText">
+                <textarea class="formText" placeholder="１年経った今だから言える、あの時の本当のメッセージ"></textarea>
+                <input type="submit" class="formBtn" value="">
+                </section>
+                <section id="sec02-2">
+                <h1><img src="i/ttl02-2.png" alt="MEMORY OF THE DAY あの日の記憶。"></h1>
+                <textarea class="formText" placeholder="１年前の自分は、何を思い、何を感じ、何をしていたのだろう…"></textarea>
                 <input type="submit" class="formBtn" value="">
                 </form>
                 </section>
@@ -54,48 +85,6 @@
                 </section>
                 <section id="sec04">
                 <h1><img src="i/ttl04.png" alt="#O311jp 今だから言える、みんなの心のメッセージ。"></h1>
-                <div id="twContainer">
-                    <div class="twContainerFeed">
-                        <ul class="twContainer">
-                            <?php foreach($all as $tweet) { ?>
-                            <li class="twWrapper clearfix">
-                            <div class="twThumb left">
-                                <img src="<?php echo $tweet['image_url']; ?>" alt="<?php echo $user ?>">
-                            </div>
-                            <div class="twContents right">
-                                <p>
-                                <a class="twName" href="https://twitter.com/#!/<?php echo $user; ?>" target="_blank"><?php echo $tweet['name']; ?></a><?php echo $tweet['text'];?>
-                                </p>
-                                <p class="twTime"><?php echo $tweet['datetime']; ?></p>
-                            </div>
-                            </li>
-                            <?php } ?>
-                        </ul>
-                    </div>
-
-                    <?php foreach($d as $user => $val) { ?>
-                    <div class="twContainerFeed disnon">
-                        <ul class="twContainer">
-                            <?php foreach($val as $tweet) { ?>
-                            <li class="twWrapper clearfix">
-                            <div class="twThumb left">
-                                <img src="<?php echo $tweet['image_url']; ?>" alt="<?php echo $user ?>">
-                            </div>
-                            <div class="twContents right">
-                                <p>
-                                <a class="twName" href="https://twitter.com/#!/<?php echo $user; ?>" target="_blank"><?php echo $tweet['name']; ?></a><?php echo $tweet['text'];?>
-                                </p>
-                                <p class="twTime"><?php echo $tweet['datetime']; ?></p>
-                            </div>
-                            </li>
-                            <?php } ?>
-                        </ul>
-                    </div>
-                    <?php } ?>
-                </div><!-- end #twContainer-->
-                </section>
-                <section id="sec05">
-                <h1><img src="i/ttl05.png" alt="YOUR TWITTER ONE YEAR AGO 1年前のあなたのtweet。"></h1>
                 <div id="twContainer">
                     <div class="twContainerFeed">
                         <ul class="twContainer">
@@ -172,10 +161,10 @@
     <footer class="footerContainer wrapper">
     <h1>DIRECTOR BY TEAM 3.11 REBORN.</h1>
     <ul class="member clearfix">
-        <li>&gt;&gt; YUTA TSURUOKA<span>|</span></li>
-        <li>&gt;&gt; SATORU ITABASHI<span>|</span></li>
-        <li>&gt;&gt; MINORI KIKUGAWA<span>|</span></li>
-        <li>&gt;&gt; SATOSHI MOGI</li>
+        <li><a href="https://www.facebook.com/yuta.tsuruoka" target="_blank">&gt;&gt; YUTA TSURUOKA</a><span>|</span></li>
+        <li><a href="https://www.facebook.com/profile.php?id=100001862109715" target="_blank">&gt;&gt; SATORU ITABASHI</a><span>|</span></li>
+        <li><a href="https://www.facebook.com/minocolor" target="_blank">&gt;&gt; MINORI KIKUGAWA</a><span>|</span></li>
+        <li><a href="https://www.facebook.com/profile.php?id=100002491780831" target="_blank">&gt;&gt; SATOSHI MOGI</a></li>
     </ul>
     <p class="copyRight"><small>&copy; 2012 TEAM 3.11 REBORN</small></p>
     </footer>
