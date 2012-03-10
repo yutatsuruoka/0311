@@ -329,18 +329,18 @@ rightContainer #sec02
 /*----------------------------------------------------------------------------
 rightContainer #sec03
 ----------------------------------------------------------------------------*/
-#sec03 #twContainerFeed {
+#sec03 .message {
   color: #fff;
-  line-height: 1.6em;
-  font-size: 20px;
+  line-height: 1.8em;
+  font-size: 24px;
 }
 /*----------------------------------------------------------------------------
 rightContainer #sec04
 ----------------------------------------------------------------------------*/
-#sec04 .message {
+#sec04 .twContainerFeed {
   color: #fff;
-  line-height: 1.8em;
-  font-size: 24px;
+  line-height: 1.6em;
+  font-size: 20px;
 }
 /*----------------------------------------------------------------------------
 rightContainer #sec06
