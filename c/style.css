@@ -278,7 +278,7 @@ a:hover {
 header
 ----------------------------------------------------------------------------*/
 .headerContainer {
-  margin: 50px auto;
+  margin: 30px auto;
   position: relative;
 }
 .headerContainer .snsContainer {
@@ -301,7 +301,7 @@ keyVisualContainer
 .keyVisualContainer {
   position: relative;
   height: 500px;
-  margin: 0 auto 100px;
+  margin: 0 auto 90px;
 }
 .keyVisualContainer img {
   position: absolute;
@@ -368,7 +368,7 @@ rightContainer #sec03
 #sec03 .message {
   color: #fff;
   line-height: 1.8em;
-  font-size: 24px;
+  font-size: 20px;
 }
 /*----------------------------------------------------------------------------
 rightContainer #sec04
