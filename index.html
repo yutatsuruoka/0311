@@ -14,17 +14,25 @@
     <link rel="shortcut icon" href="i/favicon.ico">
     <link rel="apple-touch-icon" href="i/apple-touch-icon.png">
 
-    <script type="text/javascript" src="j/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script type="text/javascript" src="j/contents.js"></script>
+    <script type="text/javascript" src="j/instadata.js"></script>
+    <script type="text/javascript" src="j/tw.js"></script>
+    <script type="text/javascript" src="j/jquery.cycle.all.js"></script>
     
     <link rel="stylesheet" href="c/style.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="c/cycle.css" />
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
-
-</head>
-<body>
+<style type="text/css">
+body{background-color: #000000}
+pre { display:none }
+#main h2 { text-align: center }
+#right { cursor: pointer }
+</style>
+  </head>
+  <body onload="Start()">
     <header class="headerContainer wrapper">
     <img src="i/logo.png" alt="3.11REBORN... あれから１年。今だから言える、心のメッセージ。">
     <ul class="snsContainer clearfix">
@@ -48,114 +56,67 @@
             <section id="sec01">
             <h1><img src="i/ttl01.png" alt="PHOTO STREAM 写真に残された記憶。"></h1>
             <ul class="photoContainer">
-                <li><img src="i/photostream_01.jpg"></li>
-                <li><img src="i/photostream_01.jpg"></li>
-                <li><img src="i/photostream_01.jpg"></li>
-                <li><img src="i/photostream_01.jpg"></li>
-                <li><img src="i/photostream_01.jpg"></li>
-                <li><img src="i/photostream_01.jpg"></li>
-                <li><img src="i/photostream_01.jpg"></li>
-                <li><img src="i/photostream_01.jpg"></li>
-                <li><img src="i/photostream_01.jpg"></li>
-                <li><img src="i/photostream_01.jpg"></li>
-                <li><img src="i/photostream_01.jpg"></li>
+                <li><img name="area1"></li>
+                <li><img name="area2"></li>
+                <li><img name="area3"></li>
+                <li><img name="area4"></li>
+                <li><img name="area5"></li>
+                <li><img name="area6"></li>
+                <li><img name="area7"></li>
+                <li><img name="area8"></li>
+                <li><img name="area9"></li>
+                <li><img name="area10"></li>
             </ul>
             </section>
         </div>
         <div class="rightContainer right">
-            <form>
+          <form action="https://twitter.com/intent/tweet"/>
+                <input type="hidden" name="original_referer" value="http://0311.jp"/ >
+                <input type="hidden" name="url" value="http://0311.jp" />
                 <section id="sec02">
                 <h1><img src="i/ttl02.png" alt="OF THE TRUTH MESSAGE 今だから言える、心のメッセージ。"></h1>
-                <textarea class="formText" placeholder="１年経った今だから言える、あの時の本当のメッセージ"></textarea>
-                <input type="submit" class="formBtn" value="">
+                <textarea name="text" class="formText" placeholder="１年経った今だから言える、あの時の本当のメッセージ"></textarea>
+                <input type="submit" class="formBtn" value="" onclick="tweetSubmit(this);">
+          </form>
                 </section>
                 <section id="sec02-2">
                 <h1><img src="i/ttl02-2.png" alt="MEMORY OF THE DAY あの日の記憶。"></h1>
-                <textarea class="formText" placeholder="１年前の自分は、何を思い、何を感じ、何をしていたのだろう…"></textarea>
-                <input type="submit" class="formBtn" value="">
-                </form>
+          <form action="https://twitter.com/intent/tweet"/>
+                <input type="hidden" name="original_referer" value="http://0311.jp"/ >
+                <input type="hidden" name="url" value="http://0311.jp" />
+                <textarea name="text" class="formText" placeholder="１年前の自分は、何を思い、何を感じ、何をしていたのだろう…"></textarea>
+                <input type="submit" class="formBtn" value="" onclick="tweetSubmit(this);">
+            </form>
                 </section>
                 <section id="sec03">
                 <h1><img src="i/ttl03.png" alt="MESSAGE TO FRIEND’S 世界中から送られたメッセージ。"></h1>
-                <p class="message">個人商店で｢困ったときはお互い様セール｣やってた。
-                日用品とかが安くなってんの。
-                日頃から値下げしまくってギリギリ運営だった癖に…！
-                ほとんど儲け出ないと思われる数字の値札を貼り
-                ながらにこにこ笑うおばさんに感動した。</p>
+                <p class="message">あの震災から１年が経過。今までで一番考えさせられた年だったかもしれない。
+                生活は一変して、物事は大きく変化した。
+                あの経験は忘れたくないし伝えていかなければいけないと思う。</p>
                 </section>
+
                 <section id="sec04">
                 <h1><img src="i/ttl04.png" alt="#O311jp 今だから言える、みんなの心のメッセージ。"></h1>
                 <div id="twContainer">
-                    <div class="twContainerFeed">
-                        <ul class="twContainer">
-                            <?php foreach($all as $tweet) { ?>
-                            <li class="twWrapper clearfix">
-                            <div class="twThumb left">
-                                <img src="<?php echo $tweet['image_url']; ?>" alt="<?php echo $user ?>">
-                            </div>
-                            <div class="twContents right">
-                                <p>
-                                <a class="twName" href="https://twitter.com/#!/<?php echo $user; ?>" target="_blank"><?php echo $tweet['name']; ?></a><?php echo $tweet['text'];?>
-                                </p>
-                                <p class="twTime"><?php echo $tweet['datetime']; ?></p>
-                            </div>
-                            </li>
-                            <?php } ?>
-                        </ul>
-                    </div>
-
-                    <?php foreach($d as $user => $val) { ?>
-                    <div class="twContainerFeed disnon">
-                        <ul class="twContainer">
-                            <?php foreach($val as $tweet) { ?>
-                            <li class="twWrapper clearfix">
-                            <div class="twThumb left">
-                                <img src="<?php echo $tweet['image_url']; ?>" alt="<?php echo $user ?>">
-                            </div>
-                            <div class="twContents right">
-                                <p>
-                                <a class="twName" href="https://twitter.com/#!/<?php echo $user; ?>" target="_blank"><?php echo $tweet['name']; ?></a><?php echo $tweet['text'];?>
-                                </p>
-                                <p class="twTime"><?php echo $tweet['datetime']; ?></p>
-                            </div>
-                            </li>
-                            <?php } ?>
-                        </ul>
-                    </div>
-                    <?php } ?>
+                  <div id="tw0311" class="twContainerFeed"></div>
                 </div><!-- end #twContainer-->
                 </section>
 
                 <section id="sec06">
                 <h1><img src="i/ttl06.png" alt="INSTAGRAM PHOTO’S 震災関連のインスタグラム"></h1>
-                <ul class="instaPhoto clearfix">
-                    <li><img src="i/insta_img01.jpg"></li>
-                    <li><img src="i/insta_img01.jpg"></li>
-                    <li class="last"><img src="i/insta_img01.jpg"></li>
-                    <li><img src="i/insta_img01.jpg"></li>
-                    <li><img src="i/insta_img01.jpg"></li>
-                    <li class="last"><img src="i/insta_img01.jpg"></li>
-                    <li><img src="i/insta_img01.jpg"></li>
-                    <li><img src="i/insta_img01.jpg"></li>
-                    <li class="last"><img src="i/insta_img01.jpg"></li>
-                    <li><img src="i/insta_img01.jpg"></li>
-                    <li><img src="i/insta_img01.jpg"></li>
-                    <li class="last"><img src="i/insta_img01.jpg"></li>
-                    <li><img src="i/insta_img01.jpg"></li>
-                    <li><img src="i/insta_img01.jpg"></li>
-                    <li class="last"><img src="i/insta_img01.jpg"></li>
-                    <li><img src="i/insta_img01.jpg"></li>
-                    <li><img src="i/insta_img01.jpg"></li>
-                    <li class="last"><img src="i/insta_img01.jpg"></li>
-                    <li><img src="i/insta_img01.jpg"></li>
-                    <li><img src="i/insta_img01.jpg"></li>
-                    <li class="last"><img src="i/insta_img01.jpg"></li>
-                    <li><img src="i/insta_img01.jpg"></li>
-                    <li><img src="i/insta_img01.jpg"></li>
-                    <li class="last"><img src="i/insta_img01.jpg"></li>
-                </ul>
+                <ul id="demos" class="instaPhoto clearfix">
+                  <li><div id="fade0"></div><pre><code class="mix">$('#fade0').cycle();</code></pre></li>
+                  <li><div id="fade1"></div><pre><code class="mix">$('#fade1').cycle();</code></pre></li>
+                  <li class="last"><div id="fade2"></div><pre><code class="mix">$('#fade2').cycle();</code></pre></li>
+                  <li><div id="fade3"></div><pre><code class="mix">$('#fade3').cycle();</code></pre></li>
+                  <li><div id="fade4"></div><pre><code class="mix">$('#fade4').cycle();</code></pre></li>
+                  <li class="last"><div id="fade5"></div><pre><code class="mix">$('#fade5').cycle();</code></pre></li>
+                  <li><div id="fade6"></div><pre><code class="mix">$('#fade6').cycle();</code></pre></li>
+                  <li><div id="fade7"></div><pre><code class="mix">$('#fade7').cycle();</code></pre></li>
+                  <li class="last"><div id="fade8"></div><pre><code class="mix">$('#fade8').cycle();</code></pre></li>
+                  </ul>
                 </section>
-            </form>
+
         </div>
     </div>
     <footer class="footerContainer wrapper">

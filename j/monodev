@@ -1,0 +1,36 @@
+$(function(){
+  var d = []
+  , tw = function(data) {
+    console.log(this.url);
+    $.each(data.results, function(i, obj) {
+      d[i] = {};
+      /*
+       *d[i]['name'] = obj.from_user_name;
+       *d[i]['image'] = obj.profile_image_url;
+       */
+      d[i]['text'] = makeLink(obj.text);
+
+    });
+  }
+
+  , makeLink = function(text) {
+    return  text.replace(/(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/i, "<a href='$1' target='_blank'>$1</a>")
+    .replace(/(^|\s)#(\w+)/g, "$1<a href='http://search.twitter.com/search?q=%23$2' target='_blank'>#$2</a>")
+    .replace(/(^|\s)@(\w+)/g, "$1<a href='http://www.twitter.com/$2' target='_blank'>@$2</a>");
+  };
+  $.ajax({
+    type : 'GET'
+    ,url : 'http://search.twitter.com/search.json'
+    ,data : {
+      q : '%230311jp' // hash
+      , rpp : '100' // ツイート数 MAX 100
+      , page : '1'  // ページ
+      /*
+       *, until: '2011-03-11'
+       *, since: '2011-03-12'
+       */
+    }
+    ,dataType: 'jsonp'
+    ,success : tw 
+  });
+});
