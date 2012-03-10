@@ -278,7 +278,21 @@ header
 keyVisualContainer
 ----------------------------------------------------------------------------*/
 .keyVisualContainer {
+  position: relative;
+  height: 1240px;
   margin: 0 auto 100px;
+}
+.keyVisualContainer img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 8;
+}
+.keyVisualContainer img.active {
+  z-index: 10;
+}
+.keyVisualContainer img.last-active {
+  z-index: 9;
 }
 /*----------------------------------------------------------------------------
 .contentsContainer  share style

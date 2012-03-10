@@ -33,7 +33,22 @@ header
 keyVisualContainer
 ----------------------------------------------------------------------------*/
 .keyVisualContainer{
+    position:relative;
+    height:1240px;
     margin:0 auto 100px;
+
+    img {
+        position:absolute;
+        top:0;
+        left:0;
+        z-index:8;
+        &.active{
+            z-index:10;
+        }
+        &.last-active {
+            z-index:9;
+        }
+    }
 }
 
 
