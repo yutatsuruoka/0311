@@ -52,10 +52,13 @@ $(function(){
 });
 
 function tweetSubmit(elm){
-  $('.formText')[0].value += ' #0311jp';
-  var ima = $('.formText')[1].value;
-  $('.formText')[1].value = '【今だから言えるメッセージ】' + ima + ' #0311jp';;
-
+  //$('.formText')[0].value += ' #0311jp';
+  //var ima = $('.formText')[1].value;
+  //$('.formText')[1].value = '【今だから言えるメッセージ】' + ima + ' #0311jp';;
+  var ima = $('.formText')[0].value;
+  $('.formText')[0].value = '【今だから言えるメッセージ】'+ima+' #0311jp';
+  var anohi = $('.formText')[1].value;
+  $('.formText')[1].value = '【あの日の記憶】'  + anohi + ' #0311jp';
 }
 
 
